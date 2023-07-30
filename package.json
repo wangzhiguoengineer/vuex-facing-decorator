@@ -5,7 +5,7 @@
   "type": "commonjs",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "typings": "dist/typings/index.d.js",
+  "typings": "dist/typings/index.d.ts",
   "scripts": {
     "build": "npm run clean && npm run build:esm && npm run build:cjs && npm run build:umd && npm run build:typings",
     "build:esm": "tsc -outDir dist/esm -module ES6",
