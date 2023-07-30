@@ -47,5 +47,8 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:wangzhiguoengineer/vuex-facing-decorator.git"
+  },
+  "publishConfig": {
+    "registry": "https://github.com/wangzhiguoengineer/vuex-facing-decorator.git"
   }
 }
