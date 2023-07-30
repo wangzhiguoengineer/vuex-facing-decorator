@@ -42,3 +42,7 @@ class Tests extends Vue {
     }
 }
 ```
+
+## Discussion
+
+To discord [https://discord.gg/CuK79ede](https://discord.gg/CuK79ede)
