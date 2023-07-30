@@ -16,7 +16,7 @@
     "test": "mocha"
   },
   "author": "wangzhiguo.engineer@gmail.com",
-  "license": "ISC",
+  "license": "MIT",
   "peerDependencies": {
     "vue": "^3.0.0",
     "vue-facing-decorator": "^3.0.0",
