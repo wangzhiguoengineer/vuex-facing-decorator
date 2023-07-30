@@ -15,6 +15,13 @@
     "clean": "rimraf dist",
     "test": "mocha"
   },
+  "keywords": [
+    "vue",
+    "vuex",
+    "vuex-class",
+    "decorator",
+    "bindings"
+  ],
   "author": "wangzhiguo.engineer@gmail.com",
   "license": "MIT",
   "peerDependencies": {
@@ -47,8 +54,5 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:wangzhiguoengineer/vuex-facing-decorator.git"
-  },
-  "publishConfig": {
-    "registry": "https://github.com/wangzhiguoengineer/vuex-facing-decorator.git"
   }
 }
