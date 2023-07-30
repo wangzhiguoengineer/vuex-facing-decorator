@@ -1,7 +1,7 @@
 {
   "name": "vuex-facing-decorator",
   "version": "1.0.0",
-  "description": "",
+  "description": "Vuex decorator specifically designed for Vue3.",
   "type": "commonjs",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -42,5 +42,10 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "homepage": "https://github.com/wangzhiguoengineer/vuex-facing-decorator",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:wangzhiguoengineer/vuex-facing-decorator.git"
+  }
 }
