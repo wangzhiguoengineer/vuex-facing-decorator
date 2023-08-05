@@ -21,6 +21,7 @@ npm i vuex-facing-decorator
 ## Example
 
 ```typescript
+import { h } from 'vue';
 import { Component, Vue } from 'vue-facing-decorator';
 import { namespace, State } from 'vuex-facing-decorator';
 
