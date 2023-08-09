@@ -1,7 +1,7 @@
 {
   "name": "vuex-facing-decorator",
-  "version": "1.0.4",
-  "description": "Vuex decorator specifically designed for Vue3.",
+  "version": "1.0.5",
+  "description": "Vue3 alternative solution for vuex-class.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "typings": "dist/typings/index.d.ts",
