@@ -10,7 +10,7 @@ export class DescriptorFactory {
 
     constructor(
         private bindProperty: BindProperty,
-        private namespaced?: string,
+        private namespace?: string,
     ) {
     }
 
@@ -32,7 +32,7 @@ export class DescriptorFactory {
      */
     private vuexDescriptor(a: any, b: any) {
         if (typeof b === 'object') {
-            this.namespaced = b?.namespaced;
+            this.namespace = b?.namespace;
         }
         if (typeof a === 'string') {
             // a=fromKey, b=opts
@@ -57,8 +57,8 @@ export class DescriptorFactory {
         return createDecorator((options, toKey) => {
             options[this.bindProperty] ??= {};
             const params = {[toKey]: fromKey ?? toKey};
-            const mapHelper = this.namespaced
-                ? this.vuexMapHelper(this.namespaced, params)
+            const mapHelper = this.namespace
+                ? this.vuexMapHelper(this.namespace, params)
                 : this.vuexMapHelper(params);
             const helper = mapHelper[toKey];
             switch (this.bindProperty) {

@@ -14,6 +14,7 @@ const ModuleA = namespace('useModuleA');
 class Tests extends Vue {
     @State globalSomeName;
     @State('globalCount') globalCount;
+    @ModuleA.State('count', {namespace: 'useModuleA'}) namespacedCount;
     @ModuleA.State someName;
     @ModuleA.State('count') count;
     @ModuleA.State((state, getter) => state.count + getter.doubleCount) count_doubleCount;
@@ -61,6 +62,9 @@ describe('test', () => {
     it('Action:actionIncrement(10),count=11', function () {
         vm.actionIncrement(10);
         expect(vm.count).to.equal(11);
+    });
+    it('namespacedCount=11', function () {
+        expect(vm.namespacedCount).to.equal(11);
     });
     it('State:count_doubleCount=33', function () {
         expect(vm.count_doubleCount).to.equal(33);

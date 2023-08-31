@@ -14,5 +14,5 @@ export type VuexMapHelper =
 export type Fn = (...args: any[]) => any;
 
 export interface Opts {
-    namespaced: string
+    namespace: string
 }
