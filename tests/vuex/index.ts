@@ -1,8 +1,8 @@
 import { createStore } from 'vuex';
-import { useModuleA } from './modules';
+import { useModuleA, useModuleB } from './modules';
 
 export const useStore = createStore({
-    modules: {useModuleA},
+    modules: {useModuleA, useModuleB},
     state: {
         globalCount: 100,
         globalSomeName: 'globalSomeName vuex',

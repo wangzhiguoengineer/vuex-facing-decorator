@@ -36,29 +36,30 @@ export class DescriptorFactory {
         }
         if (typeof a === 'string') {
             // a=fromKey, b=opts
-            return this.handleVuexDecorator(a);
+            return this.handleVuexDecorator(a, this.namespace);
         }
         if (typeof a === 'function') {
             // a=fromFn, b=opts
-            return this.handleVuexDecorator(a);
+            return this.handleVuexDecorator(a, this.namespace);
         }
         if (typeof b === 'string') {
             // b=toKey=fromKey
-            return this.handleVuexDecorator(b)(a, b);
+            return this.handleVuexDecorator(b, this.namespace)(a, b);
         }
     }
 
     /**
      * 处理vuex装饰器
      * @param fromKey
+     * @param fromNs
      * @private
      */
-    private handleVuexDecorator(fromKey?: any) {
+    private handleVuexDecorator(fromKey?: any, fromNs?: any) {
         return createDecorator((options, toKey) => {
             options[this.bindProperty] ??= {};
             const params = {[toKey]: fromKey ?? toKey};
-            const mapHelper = this.namespace
-                ? this.vuexMapHelper(this.namespace, params)
+            const mapHelper = fromNs
+                ? this.vuexMapHelper(fromNs, params)
                 : this.vuexMapHelper(params);
             const helper = mapHelper[toKey];
             switch (this.bindProperty) {
