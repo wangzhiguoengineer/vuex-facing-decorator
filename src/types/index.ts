@@ -16,3 +16,9 @@ export type Fn = (...args: any[]) => any;
 export interface Opts {
     namespace: string
 }
+
+export type FromKey = string | Fn;
+
+export interface StoreFactory {
+    make(fromKey: FromKey, options?: Opts): any;
+}

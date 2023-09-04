@@ -1,8 +1,8 @@
-export const useModuleA = {
+export const A = {
     namespaced: true,
     state: () => ({
-        count: 0,
-        someName: 'someName vuex'
+        name: 'a',
+        count: 100,
     }),
     getters: {
         doubleCount(state) {
@@ -10,13 +10,13 @@ export const useModuleA = {
         },
     },
     mutations: {
-        increment(state, count) {
+        mutationsIncrement(state, count) {
             state.count += count;
         }
     },
     actions: {
         actionIncrement(context, count) {
-            context.commit('increment', count);
+            context.commit('mutationsIncrement', count);
         }
     }
 };

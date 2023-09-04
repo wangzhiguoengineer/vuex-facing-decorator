@@ -1,1 +1,2 @@
-export * from './use-module-a';
+export * from './a';
+export * from './b';

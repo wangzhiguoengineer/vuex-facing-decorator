@@ -1,12 +1,9 @@
-import { createStore } from 'vuex';
-import { A, B } from './modules';
-
-export const useStore = createStore({
-    modules: {A, B},
-    state: {
-        name: 'g',
-        count: 1000,
-    },
+export const B = {
+    namespaced: true,
+    state: () => ({
+        name: 'b',
+        count: 200,
+    }),
     getters: {
         doubleCount(state) {
             return state.count * 2;
@@ -22,5 +19,4 @@ export const useStore = createStore({
             context.commit('mutationsIncrement', count);
         }
     }
-});
-
+};
