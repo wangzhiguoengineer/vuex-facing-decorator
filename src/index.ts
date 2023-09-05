@@ -1,7 +1,6 @@
 import { BindProperty as B } from './const';
 import { mapActions, mapGetters, mapMutations, mapState } from 'vuex';
-import { createPropertyDescriptor } from './factory';
-import { createVuexFactory } from './factory/vuex-factory';
+import { createPropertyDescriptor, createVuexFactory } from './factory';
 
 export const State = createPropertyDescriptor(createVuexFactory(B.computed, mapState));
 export const Getter = createPropertyDescriptor(createVuexFactory(B.computed, mapGetters));
